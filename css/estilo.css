@@ -18,7 +18,11 @@ footer{
     margin: 0 auto; width: 960px; } */
 
 /* id */
-#conteudo{padding:50px 0;}
+#conteudo{
+    padding:50px 0;
+    max-width: 700px;
+}
+
 #menu{ float:right; padding: 35px 0;}
 #menu a{ text-decoration: none; font-size: 18px; padding: 22px 40px; color: #e3e3e3; text-shadow: 1px 1px 1px #111;}
 #menu a:hover{ background-color: #44b874;}
@@ -38,11 +42,11 @@ table tr {
     text-align: center
 }
 
-table  tr td a {
+table tr td a {
     font-size: 22px;
     color: black;
 }
 
-table  tr td a:hover {
+table tr td a:hover {
     color: rgb(108, 108, 108);
 }

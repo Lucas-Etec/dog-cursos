@@ -1,4 +1,5 @@
 <a class="btn btn-success" href="?pagina=inserir_matricula">Inserir nova matricula</a>
+<br><br>
 
 <table id="matriculas" class="table table-hover table-striped">
     <thead>
@@ -15,7 +16,7 @@
             echo "<tr><td>" . $linha['nome_aluno'] . "</td>";
             echo "<td>" . $linha['nome_curso'] . "</td>";
             echo "<td><a href=?pagina=inserir_matricula&editar=" . $linha['id_aluno_curso'] . "><ion-icon name='create-outline'></ion-icon></a></td>";
-            echo "<td><a href=deleta_matricula.php?id_aluno_curso=" . $linha['id_aluno_curso'] . ">Deletar</a></td></tr>";
+            echo "<td><a href=deleta_matricula.php?id_aluno_curso=" . $linha['id_aluno_curso'] . "><ion-icon name='trash-outline'></ion-icon></a></td></tr>";
         }
         ?>
     </tbody>

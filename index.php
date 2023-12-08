@@ -1,18 +1,25 @@
 <?php
+# Iniciar sessão
+session_start();
 
-#Base de dados
+# Base de dados
 include 'db.php';
 
-#Cabeçalho
+# Cabeçalho
 include 'header.php';
 
-#Conteúdo da Página
-if (isset($_GET['pagina'])) {
-    $pagina = $_GET['pagina'];
+# Conteúdo da Página
+
+if (isset($_SESSION['login'])) {
+    if (isset($_GET['pagina'])) {
+        $pagina = $_GET['pagina'];
+    } else {
+        $pagina = 'cursos';
+    }
 } else {
     $pagina = 'home';
 }
-
+    
 if ($pagina == 'cursos') {
     include 'views/cursos.php';
 } else if ($pagina == 'alunos') {
@@ -39,9 +46,6 @@ if ($pagina == 'cursos') {
 
 // include $pagina == null ? "views/home.php": "views/" + $pagina;
 
-#Rodapé
+# Rodapé
 include 'footer.php';
 ?>
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

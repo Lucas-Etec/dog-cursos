@@ -22,6 +22,9 @@
                 <a href="?pagina=matriculas">Matriculas</a>
                 <a href="?pagina=funcionarios">Funcionários</a>
                 <a href="?pagina=cargos">Cargos</a>
+                <?php if(isset($_SESSION['login'])){ ?>
+                    <a href="logout.php"><?= $_SESSION['usuario']; ?> (sair)</a>
+                <?php } ?>
             </div>
         </div>
     </header>

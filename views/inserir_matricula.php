@@ -2,7 +2,8 @@
 
     <h1>Inserir nova matricula</h1>
     <form method="post" action="processa_matricula.php">
-        <p class="badge text-bg-secondary">Selecione o aluno</p>
+        <p style="margin: 0;" class="badge text-bg-secondary">Selecione o aluno</p>
+        <br>
         <select name="escolha_aluno" id="escolha_aluno">
             <option>Selecione um aluno</option>
             <?php
@@ -11,8 +12,10 @@
             }
             ?>
         </select>
-
-        <p class="badge text-bg-secondary">Selecione</p>
+        <br>
+        <br>
+        <p style="margin: 0;" class="badge text-bg-secondary">Selecione um curso</p>
+        <br>
         <select name="escolha_curso" id="escolha_curso">
             <option>Selecione um curso</option>
             <?php
@@ -21,6 +24,8 @@
             }
             ?>
         </select>
+        <br>
+        <br>
         <input class="btn btn-success" type="submit" value="Matricular aluno no curso">
     </form>
 <?php } else { ?>
@@ -28,7 +33,8 @@
         <?php if ($linhaMatricula['id_aluno_curso'] == $_GET['editar']) { ?>
             <h1>Editar matricula</h1>
             <form method="post" action="edita_matricula.php">
-                <p class="badge text-bg-secondary">Selecione o aluno</p>
+                <p style="margin: 0;" class="badge text-bg-secondary">Selecione o aluno</p>
+                <br>
                 <select name="escolha_aluno" id="escolha_aluno">
                     <option>Selecione um aluno</option>
                     <?php
@@ -41,8 +47,10 @@
                     }
                     ?>
                 </select>
-
-                <p class="badge text-bg-secondary">Selecione</p>
+                <br>
+                <br>
+                <p style="margin: 0;" class="badge text-bg-secondary">Selecione</p>
+                <br>
                 <select name="escolha_curso" id="escolha_curso">
                     <option>Selecione um curso</option>
                     <?php
@@ -55,6 +63,8 @@
                     }
                     ?>
                 </select>
+                <br>
+                <br>
                 <input class="btn btn-success" type="submit" value="Salvar Matricula">
             </form>
         <?php } ?>

@@ -1,4 +1,5 @@
 <a class="btn btn-success" href="?pagina=inserir_curso">Inserir novo curso</a>
+<br><br>
 
 <table id="cursos" class="table table-hover table-striped">
     <thead>

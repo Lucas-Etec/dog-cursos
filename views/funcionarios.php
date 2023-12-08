@@ -1,4 +1,6 @@
 <a class="btn btn-success" href="?pagina=inserir_funcionario">Inserir novo funcionário</a>
+<br>
+<br>
 
 <table id="funcionarios" class="table table-hover table-striped">
     <thead>
@@ -15,7 +17,7 @@
             echo "<tr><td>" . $linha['nome_funcionario'] . "</td>";
             echo "<td>" . $linha['cargo'] . "</td>";
             echo "<td><a href=?pagina=inserir_funcionario&editar=" . $linha['id_funcionario'] . "><ion-icon name='create-outline'></ion-icon></a></td>";
-            echo "<td><a href=deleta_funcionario.php?id_funcionario=" . $linha['id_funcionario'] . ">Deletar</a></td></tr>";
+            echo "<td><a href=deleta_funcionario.php?id_funcionario=" . $linha['id_funcionario'] . "><ion-icon name='trash-outline'></ion-icon></a></td></tr>";
         }
         
         // while ($linha = mysqli_fetch_array(mysqli_query($conexao, "SELECT * 
