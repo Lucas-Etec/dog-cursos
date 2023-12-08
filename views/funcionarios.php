@@ -18,8 +18,8 @@
             echo "<td>" . $linha['cargo'] . "</td>";
             echo "<td><a href=?pagina=inserir_funcionario&editar=" . $linha['id_funcionario'] . "><ion-icon name='create-outline'></ion-icon></a></td>";
             echo "<td><a href=deleta_funcionario.php?id_funcionario=" . $linha['id_funcionario'] . "><ion-icon name='trash-outline'></ion-icon></a></td></tr>";
+            echo "aaaaa";
         }
-        
         // while ($linha = mysqli_fetch_array(mysqli_query($conexao, "SELECT * 
         // FROM CARGOS 
         // inner join FUNCIONARIOS on FUNCIONARIOS.cargo = CARGOS.id_cargo"))) {

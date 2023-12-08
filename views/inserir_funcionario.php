@@ -33,9 +33,15 @@
                 <select name="escolha_cargo" id="escolha_cargo">
                     <option>Selecione um cargo</option>
                     <?php
-                    while ($linha = mysqli_fetch_array($consulta_cargos)) {
-                        echo '<option value="' . $linha['id_cargo'] . '">' . $linha['nome_cargo'] . '</option>';
-                        echo '<p>'. $linha['id_cargo'] . $linha['nome_cargo'] . '</p>';
+                    while ($linhaCargo = mysqli_fetch_array($consulta_cargos)) {
+                        $selected = "";
+                        if ($linhaCargo['id_cargo'] == $linha['cargo']) {
+                            
+                            $selected = "selected";
+                        }
+                        
+                        echo '<option ' . $selected . ' value="' . $linhaCargo['id_cargo'] . '">' . $linhaCargo['nome_cargo'] . '</option>';
+                        echo '<p>'. $linhaCargo['id_cargo'] . $linhaCargo['nome_cargo'] . '</p>';
                     }
                     ?>
                     </select>

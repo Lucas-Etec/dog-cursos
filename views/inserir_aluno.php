@@ -6,7 +6,7 @@
         <br>
         <div>
             <label class="badge text-bg-secondary" for="data_nascimento">Data de nascimento</label>
-            <input class="form-control" type="text" name="data_nascimento" id="data_nascimento" placeholder="Insira a data de nascimento">
+            <input class="form-control" type="date" name="data_nascimento" id="data_nascimento" placeholder="Insira a data de nascimento">
         </div>
         <br>
         <input class="btn btn-success" type="submit" value="Inserir aluno">
@@ -21,7 +21,7 @@
                 <input class="form-control" type="text" name="nome_aluno" placeholder="Insira o nome do aluno" value="<?= $linha['nome_aluno'] ?>">
                 <br>
                 <label class="badge text-bg-secondary" for="data_nascimento">Data de nascimento</label>
-                <input class="form-control" type="text" name="data_nascimento" id="data_nascimento" placeholder="Insira a data de nascimento" value="<?= $linha['data_nascimento'] ?>">
+                <input class="form-control" type="date" name="data_nascimento" id="data_nascimento" placeholder="Insira a data de nascimento" value="<?= $linha['data_nascimento'] ?>">
                 <br>
                 <input class="btn btn-success" type="submit" value="Salvar aluno">
             </form>
